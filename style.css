@@ -5,7 +5,14 @@
 }
 
 :root{
+   --primary-color: dodgerblue;
+   background-color: rgb(31, 0, 37);
+   color: gainsboro;
+}
 
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 
 img{
@@ -22,9 +29,95 @@ img{
 }
 
 .hero-image{
-    max-width: 30em;
+    max-width: 25em;
 }
 
 .why-us-image{
-    max-width: 30em;
+    max-width: 70em;
+    border-radius: 10px;
+}
+
+
+section{
+    margin: 1em;
+    min-height: 50vh;
+}
+
+
+
+/* HEADER SECTION */
+
+header{
+    background-color: linear-gradient(purple, black);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    gap: 3em;
+}
+
+header nav ul {
+    display: flex;
+    gap: 3em;
+    list-style-type: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: gainsboro;
+    transition: color 1s;
+}
+
+header nav ul li a:hover{
+    color: dodgerblue;
+}
+
+.logo-container{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+/* HERO SECTION */
+.hero-section{
+    padding-top: 4em;
+}
+
+.hero-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero-textual h1{
+    padding-bottom: 0.51em;
+    font-size: 3em;
+}
+
+/* WHY CHOOSE US SECTION */
+.why-us-section{
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    align-items:end;
+}
+
+.why-us-details{
+    margin-top: 2em;
+}
+
+.why-us-details-card{
+    padding: 1em;
+    border: 1px solid purple;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition:   transform 1s;
+}
+
+.why-us-details-card:hover{
+    transform: translatex(3px);
 }
