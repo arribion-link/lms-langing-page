@@ -6,7 +6,7 @@
 
 :root{
    --primary-color: dodgerblue;
-   background-color: rgb(31, 0, 37);
+   background-color: rgb(12, 1, 14);
    color: gainsboro;
 }
 
@@ -15,6 +15,7 @@ body{
     
 }
 
+/* IMAGES */
 img{
     width: 100%;
     height: auto;
@@ -30,17 +31,32 @@ img{
 
 .hero-image{
     max-width: 25em;
+    display: block;
 }
 
 .why-us-image{
-    max-width: 70em;
+    max-width: 40em;
     border-radius: 10px;
+    max-height: 40em;
 }
 
+.courses-image{
+    max-width: 25em;
+    border-radius: 10px;
+    display: block;
+}
 
+/* SECTIONS */
 section{
-    margin: 1em;
+    margin: 0em 1em;
     min-height: 50vh;
+}
+
+.span-identifier{
+    padding: 4px 20px;
+    border: 1px solid white;
+    border-radius: 2em;
+color: brown;
 }
 
 
@@ -48,7 +64,7 @@ section{
 /* HEADER SECTION */
 
 header{
-    background-color: linear-gradient(purple, black);
+    background-image: linear-gradient(rgba(204, 1, 255, 0.269), rgb(12, 1, 14));
     display: flex;
     justify-content: space-between;
     padding: 1em;
@@ -76,6 +92,19 @@ header nav ul li a:hover{
     color: dodgerblue;
 }
 
+header .nav-btn{
+    padding: 5px;
+    width: 10em;
+    height: 2.2em;
+    /* background-color: ; */
+    font-weight: bold;
+    color: purple;
+}
+
+header nav {
+    align-items: center;
+}
+
 .logo-container{
     display: flex;
     gap: 1em;
@@ -84,7 +113,7 @@ header nav ul li a:hover{
 
 /* HERO SECTION */
 .hero-section{
-    padding-top: 4em;
+    padding-top: 3em;
 }
 
 .hero-container{
@@ -97,13 +126,51 @@ header nav ul li a:hover{
     font-size: 3em;
 }
 
+.hero-textual button{
+    padding: 6px;
+    width: 20em;
+    margin: 2em 0em;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: purple;
+}
+
+.hero-textual  .hero-play{
+    width: 15px;
+    height: 15px;
+    padding: 12px;
+    border-radius: 50%;
+    background: purple;
+}
+
+
+/* TRUSTED BY SECTION */
+marquee{
+    align-items: center;
+}
+
+marquee img{
+    margin: 2em;
+}
+
+.trusted-by-section{
+    background-color: rgba(12, 1, 51, 0.356);
+}
+
+.trusted-by-section h1{
+    text-align: center;
+    font-size: 3em;
+    color: rgb(255, 193, 255);
+}
+
+
 /* WHY CHOOSE US SECTION */
 .why-us-section{
     margin-top: 5em;
     display: flex;
     justify-content: space-between;
     gap: 2em;
-    align-items:end;
+    align-items:start;
 }
 
 .why-us-details{
@@ -112,12 +179,71 @@ header nav ul li a:hover{
 
 .why-us-details-card{
     padding: 1em;
-    border: 1px solid purple;
+    border: 1px solid rgba(128, 0, 128, 0.418);
     border-radius: 10px;
     margin-top: 10px;
     transition:   transform 1s;
+    background-color: rgba(255, 255, 255, 0.057);
+    backdrop-filter: blur(15px);
 }
 
 .why-us-details-card:hover{
     transform: translatex(3px);
+}
+
+.why-choose-us-textual h1{
+    margin: 1em 0em;
+    font-size: 3em;
+    color: rgb(254, 208, 254);
+}
+
+
+/* COURSES SECTION */
+.courses-section{
+    margin-top: 8em;
+}
+
+.courses-section .identifier{
+    display: flex;
+    justify-content: center;
+}
+
+.courses-section h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+.courses-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 2em;
+}
+
+
+/* HOW IT WORKS SECTION */
+
+.how-it-works-section{
+    margin-top: 8em;
+}
+
+.how-it-works-section .section-header{
+    text-align: center;
+}
+
+.how-it-works-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 4em 0em;
+}
+
+
+/* FOOTER */
+footer{
+    background-color: rgba(72, 0, 255, 0.162);
+    min-height: 80vh;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4em;
 }
