@@ -15,6 +15,7 @@ body{
     
 }
 
+
 /* IMAGES */
 img{
     width: 100%;
@@ -34,22 +35,10 @@ img{
     display: block;
 }
 
-.why-us-image{
-    max-width: 40em;
-    border-radius: 10px;
-    max-height: 40em;
-}
-
-.courses-image{
-    max-width: 25em;
-    border-radius: 10px;
-    display: block;
-}
-
 /* SECTIONS */
 section{
     margin: 0em 1em;
-    min-height: 50vh;
+    min-height: 60vh;
 }
 
 .span-identifier{
@@ -111,6 +100,8 @@ header nav {
     align-items: center;
 }
 
+
+
 /* HERO SECTION */
 .hero-section{
     padding-top: 3em;
@@ -143,18 +134,26 @@ header nav {
     background: purple;
 }
 
+@media(max-width:900px){
+    header nav {
+    display: none;
+}
+
+.hero-container{
+    flex-direction: column;
+}
+}
+
 
 /* TRUSTED BY SECTION */
-marquee{
-    align-items: center;
-}
-
-marquee img{
-    margin: 2em;
-}
-
 .trusted-by-section{
     background-color: rgba(12, 1, 51, 0.356);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    overflow: hidden;
+    left: 0;
 }
 
 .trusted-by-section h1{
@@ -166,11 +165,18 @@ marquee img{
 
 /* WHY CHOOSE US SECTION */
 .why-us-section{
-    margin-top: 5em;
-    display: flex;
-    justify-content: space-between;
+    margin: 5em 1em 0em 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-content: space-between; */
     gap: 2em;
-    align-items:start;
+    /* align-items:start; */
+}
+
+.why-us-image{
+    max-width: 40em;
+    border-radius: 10px;
+    max-height: 40em;
 }
 
 .why-us-details{
@@ -200,25 +206,60 @@ marquee img{
 
 /* COURSES SECTION */
 .courses-section{
-    margin-top: 8em;
+    margin: 8em 1em 0em 1em;
 }
 
-.courses-section .identifier{
-    display: flex;
-    justify-content: center;
+.courses-header{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0em;
 }
 
-.courses-section h1{
-    text-align: center;
-    font-size: 3em;
+.courses-header input{
+    padding: 8px;
+    background-color: transparent;
+    border: 1px solid purple;
+    width: 30em;
+    border-radius: 20px;
+}
+
+.courses-header button{
+    padding: 8px;
+    background-color: purple;
+    color: white ;
+    border: none;
+    border-radius: 20px;
+    width: 10em;
 }
 
 .courses-container{
+    margin-top: 3em;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    column-gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1em;
 }
 
+.course-card{
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.courses-image{
+    width: 100%;
+    height: auto;
+    min-height: 15em;
+
+    border-radius: 10px 10px 0px 0px;
+    display: block;
+    background-color: rgb(42, 33, 51);
+    /* width: 200px; */
+}
+
+.courses-card-details{
+    padding: 2em 1em 1em 1em;
+}
 
 /* HOW IT WORKS SECTION */
 
@@ -230,6 +271,16 @@ marquee img{
     text-align: center;
 }
 
+.how-it-works-timeline{
+    width: 100%;
+    background-color: white;
+    height: 2px;
+    z-index: -10;
+    position: absolute;
+    margin-top: 2em;
+    /* margin: 2em; */
+}
+
 .how-it-works-container{
     display: flex;
     justify-content: space-around;
@@ -237,10 +288,40 @@ marquee img{
 }
 
 
+.how-it-works-card{
+    background-color: violet;
+    width: 15em ;
+    height: 4em;
+}
+
+
+
+/* CALL TO ACTION SECTION */
+
+
+.call-to-action-section{
+    background-color: black;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 6em;
+    /* transition: border 1.5s; */
+    border: 1px solid purple;
+    text-align: center;
+    padding-top: 3em;
+}
+
+
 /* FOOTER */
 footer{
-    background-color: rgba(72, 0, 255, 0.162);
+    background-color: rgba(0, 0, 0, 0.299);
     min-height: 80vh;
+    box-shadow: 1px 1px 10em rgba(128, 0, 128, 0.395);
+    padding-top: 1em;
+    transition: box-shadow 1s;
+}
+
+footer:hover{
+    box-shadow: 1px 1px 10em purple;
 }
 .footer{
     display: flex;
